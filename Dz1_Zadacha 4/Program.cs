@@ -5,14 +5,11 @@
 //22, 3, 9 -> 22
 
 Console.WriteLine("Введите 3 числа");
-int a = Convert.ToInt32(Console.ReadLine());
+int max = Convert.ToInt32(Console.ReadLine());
 int b = Convert.ToInt32(Console.ReadLine());
 int c = Convert.ToInt32(Console.ReadLine());
 
-int max = a;
-
-if (b>a && b>c) {max=b;}
-if (c>a && c>b) {max=c;}
-
+if (b > max && b > c) { max = b; }
+if (c > max && c > b) { max = c; }
 
 Console.WriteLine($"max={max}");
