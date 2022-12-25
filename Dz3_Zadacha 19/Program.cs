@@ -8,11 +8,17 @@
 Console.Write("Введи пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number<0) number = Math.Abs(number);
-int rebmun = (BlackBox(number));
+
+if ((number > -10000 && number < 1000) ||(number>99999)||(number<-99999))
+    Console.WriteLine ("Число не удовлетворяет условиям задачи");
+else 
+    {
+    int rebmun = (BlackBox(number));
+    if (number == rebmun) Console.WriteLine("Да");
+    if (number != rebmun) Console.WriteLine("Нет");
+    }
 
 
-if (number == rebmun) Console.WriteLine("Да");
-if (number != rebmun) Console.WriteLine("Нет");
 
 int BlackBox(int chislo)
 {
