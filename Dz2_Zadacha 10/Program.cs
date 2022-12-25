@@ -7,9 +7,13 @@
 
 Console.Write ("Введи трехзначное число ");
 int number = Convert.ToInt32 (Console.ReadLine());
-Console.Write (Function (number));
 
-
+if (number>999 || number < 100) 
+      Console.WriteLine("Данное число не удовлетворяет условиям задачи");
+else 
+      {
+      Console.Write (Function (number));
+      }
 
 int Function (int a)
 {

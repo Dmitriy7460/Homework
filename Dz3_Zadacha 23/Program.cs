@@ -14,18 +14,18 @@ int number = Convert.ToInt32 (Console.ReadLine());
 if (number > 0)
  {
     bool znach = true;
-    Box(number, znach);
+    Сube(number, znach);
 }
 
 if (number<0)
 {
     bool znach = false;
-    Box(-number,znach);
+    Сube(-number,znach);
 }
 
 
 
-void Box (int a, bool b)
+void Сube (int a, bool b)
 {
 int i = 0;
 while (i < a)

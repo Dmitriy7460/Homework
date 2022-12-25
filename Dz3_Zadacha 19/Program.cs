@@ -13,14 +13,14 @@ if ((number > -10000 && number < 1000) ||(number>99999)||(number<-99999))
     Console.WriteLine ("Число не удовлетворяет условиям задачи");
 else 
     {
-    int rebmun = (BlackBox(number));
+    int rebmun = (PalindromCreator(number));
     if (number == rebmun) Console.WriteLine("Да");
     if (number != rebmun) Console.WriteLine("Нет");
     }
 
 
 
-int BlackBox(int chislo)
+int PalindromCreator(int chislo)
 {
     int re = 0;
 
