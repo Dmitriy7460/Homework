@@ -9,7 +9,8 @@ int max = Convert.ToInt32(Console.ReadLine());
 int b = Convert.ToInt32(Console.ReadLine());
 int c = Convert.ToInt32(Console.ReadLine());
 
-if (b > max && b > c) { max = b; }
-if (c > max && c > b) { max = c; }
+if (b > max ) { max = b; }
+if (c > max ) { max = c; }
+
 
 Console.WriteLine($"max={max}");
