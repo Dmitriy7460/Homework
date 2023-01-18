@@ -5,17 +5,13 @@
 //78 -> третьей цифры нет
 //32679 -> 6
 
-
 Console.Write("Введи число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-
-
 
 if (number < 100 && number >-100)
     Console.WriteLine("Третьей цифры нет");
 else
     Console.WriteLine(MagickBox(number));
-
 
 int MagickBox(int a)
 {
