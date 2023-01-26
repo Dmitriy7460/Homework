@@ -39,7 +39,7 @@ int CountOfNumbers(int[] arr)
 
     for (int i = 0; i < arr.Length; i++)
     {
-        int x = (arr[i] < 0) ? Count ++ : Count += 0;
+        int x = (arr[i] > 0) ? Count ++ : Count += 0;
     }
     return Count;
 }
