@@ -9,7 +9,7 @@ int size = 5, minVal = -10, maxVal = 10;
 
 double[] array = CreateArray(size, minVal, maxVal);
 PrintArray(array);
-Console.WriteLine($" -> {SearchForMax(array)-SearchForMin(array)}");
+Console.WriteLine($" -> {Math.Round(SearchForMax(array)-SearchForMin(array),1)}");
 
 Console.WriteLine($" Max: {SearchForMax(array),3}");
 Console.WriteLine($" Min: {SearchForMin(array),3}");
@@ -27,7 +27,7 @@ double[] CreateArray(int s, int min, int max)
         arr[i] = Math.Round(arr[i],1);
     }
     return arr;
-};
+}
 
 double SearchForMax(double[] arr)
 {
@@ -41,7 +41,7 @@ double SearchForMax(double[] arr)
         }
     }
     return max;
-};
+}
 
 double SearchForMin(double[] arr)
 {
@@ -55,7 +55,7 @@ double SearchForMin(double[] arr)
         }
     }
     return min;
-};
+}
 
 void PrintArray(double[] arr)
 {
@@ -65,4 +65,4 @@ void PrintArray(double[] arr)
         Console.Write($"{arr[i]}; ");
     }
     Console.Write("\b\b]");
-};
+}

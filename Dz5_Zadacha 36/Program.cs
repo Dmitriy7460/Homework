@@ -22,7 +22,7 @@ int[] CreateArray(int s, int min, int max)
         arr[i] = rnd.Next(min, max + 1);
     }
     return arr;
-};
+}
 
 int Сalculator(int[] arr)
 {
@@ -33,7 +33,7 @@ int Сalculator(int[] arr)
         sum += arr[i];
     }
     return sum;
-};
+}
 
 void PrintArray(int[] arr)
 {
@@ -43,4 +43,4 @@ void PrintArray(int[] arr)
         Console.Write($"{arr[i]}, ");
     }
     Console.Write("\b\b]");
-};
+}

@@ -20,7 +20,7 @@ int[] CreateArray(int s, int min, int max)
         arr[i] = rnd.Next(min, max + 1);
     }
     return arr;
-};
+}
 
 int Сalculator(int[] arr)
 {
@@ -31,7 +31,7 @@ int Сalculator(int[] arr)
         if (arr[i] % 2 == 0) count++;
     }
     return count;
-};
+}
 
 void PrintArray(int[] arr)
 {
@@ -41,4 +41,4 @@ void PrintArray(int[] arr)
         Console.Write($"{arr[i]}, ");
     }
     Console.Write("\b\b]");
-};
+}
