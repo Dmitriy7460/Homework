@@ -27,21 +27,21 @@ int[] CreateArray(int[] arr, int i)
     else
       {
         // Console.WriteLine(string.Join(", ", arr));
-        Console.WriteLine(SumOfNumbers(arr));
+        Console.WriteLine(CountOfNumbers(arr));
       };
 
     return arr;
 }
 
-int SumOfNumbers(int[] arr)
+int CountOfNumbers(int[] arr)
 {
-    int sum = 0;
+    int Count = 0;
 
     for (int i = 0; i < arr.Length; i++)
     {
-        int x = (arr[i] < 0) ? sum += arr[i] : sum += 0;
+        int x = (arr[i] < 0) ? Count ++ : Count += 0;
     }
-    return Math.Abs(sum);
+    return Count;
 }
 
 
