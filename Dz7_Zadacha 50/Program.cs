@@ -20,7 +20,7 @@ Check(Input(exceptions),matrix);
 
 string[] Input (char[] exp)
 {
-    Console.Write("Введи номера строки и столбца: ");
+    Console.Write("Введи номера строки и столбца через пробел, точку или запятую: ");
     string num = Console.ReadLine();
     string[] stringOfNum = num.Split(exp);
 
@@ -33,11 +33,11 @@ void Check(string[]num, int[,]matr)
     int x = Convert.ToInt32(num[0]);
     int y =  Convert.ToInt32(num[1]);
 
-    if ((x==0) || (y==0) || (x > matr.GetLength(0)) || (y > matr.GetLength(1)))
-    {Console.WriteLine("введены неверные значения");}
+    if ((x<=0) || (y<=0) || (x > matr.GetLength(0)) || (y > matr.GetLength(1)))
+    {Console.WriteLine("Введены неверные значения");}
 
     else
-    {Console.WriteLine($"{matr[x-1,y-1]}");}
+    {Console.WriteLine($"Значение элемента на {x} строке и {y} столбще равняется {matr[x-1,y-1]}.");}
 }
 
 int[,] CreateMatrixDobleRnd(int rows, int coloms, int min, int max)

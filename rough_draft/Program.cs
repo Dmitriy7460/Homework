@@ -89,38 +89,47 @@
 // 1 2 3 4
 // 2 3 4 5
 
-int[,] matrix = CreateMatrixRnd (3,4,-10,10);
-PrintMatrix(matrix);
+// int[,] matrix = CreateMatrixRnd (3,4,-10,10);
+// PrintMatrix(matrix);
 
 
-    //\\//\\//\\//\\
+//     //\\//\\//\\//\\
 
-int[,] CreateMatrixRnd (int round, int coloms, int min, int max)
-{
-  //Random rnd = new Random();
-  int[,] matr = new int[round,coloms];
+// int[,] CreateMatrixRnd (int round, int coloms, int min, int max)
+// {
+//   //Random rnd = new Random();
+//   int[,] matr = new int[round,coloms];
 
-  for (int i = 0; i < matr.GetLength(0); i++)
-  {
-    for (int j = 0; j < matr.GetLength(1); j++)
-    {
-     // matr[i,j] = rnd.Next(min, max + 1);
-      matr[i,j] = i+j;
-    }
-  }
+//   for (int i = 0; i < matr.GetLength(0); i++)
+//   {
+//     for (int j = 0; j < matr.GetLength(1); j++)
+//     {
+//      // matr[i,j] = rnd.Next(min, max + 1);
+//       matr[i,j] = i+j;
+//     }
+//   }
 
-  return matr;
-}
+//   return matr;
+// }
 
-void PrintMatrix (int[,] matr)
-{
-  for (int i = 0; i < matr.GetLength(0); i++)
-  {
-    Console.Write("|");
-      for (int j = 0; j < matr.GetLength(1); j++)
-      {
-        Console.Write($"{matr[i,j], 4} ");
-      }
-    Console.WriteLine(" |");
-  }
-}
+// void PrintMatrix (int[,] matr)
+// {
+//   for (int i = 0; i < matr.GetLength(0); i++)
+//   {
+//     Console.Write("|");
+//       for (int j = 0; j < matr.GetLength(1); j++)
+//       {
+//         Console.Write($"{matr[i,j], 4} ");
+//       }
+//     Console.WriteLine(" |");
+//   }
+// }
+
+
+
+
+
+
+////////////////////////////////////////////////
+
+

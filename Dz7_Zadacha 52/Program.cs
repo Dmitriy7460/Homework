@@ -8,13 +8,10 @@
 
 
 
-
 int[,] matrix = CreateMatrixDobleRnd(5, 12, -3, 3);  //строки, столбцы, мин, макс
 PrintMatrix(matrix);
 
 PrintAnswer(Сalculations(matrix));
-
-
 
 
 //\\//\\//\\//\\
@@ -49,7 +46,6 @@ void PrintMatrix(int[,] mtr)
     }
 }
 
-
 double[] Сalculations (int[,] mtr)
 {
     double[] temp = new double[mtr.GetLength(1)];
@@ -72,3 +68,4 @@ void PrintAnswer (double[] arrr)
     Console.WriteLine();
     Console.WriteLine($"{String.Join(";  ",arrr)}");
 }
+
