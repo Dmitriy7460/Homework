@@ -35,12 +35,16 @@ void Checkout (double k1,double k2)
 
 void FindingIntersection (double k1, double b1, double k2, double b2 )
 {
-double x = (b2-b1)/(k1-k2);
-double y = k1*x+b1;
+    double x = (b2-b1)/(k1-k2);
+    double y = k1*x+b1;
 
+    PrintResult (x, y);
+}
+
+
+void PrintResult (double x, double y)
+{
     Console.WriteLine("Кординаты точки пересечения:");
     Console.WriteLine($"x = {Math.Round(x,3)}");
     Console.WriteLine($"y = {Math.Round(y,3)}");
 }
-
-

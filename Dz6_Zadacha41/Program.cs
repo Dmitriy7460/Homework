@@ -43,7 +43,3 @@ int CountOfNumbers(int[] arr)
     }
     return Count;
 }
-
-
-
-
