@@ -6,7 +6,7 @@
 // 10 09 08 07
 
 
-int[,] matrix = CreateMatrixDobleNul(6, 6);  // Строки, Столбцы.
+int[,] matrix = CreateMatrixDobleNul(4, 4);  // Строки, Столбцы.
 PrintMatrix(matrix);
 
 
@@ -48,7 +48,7 @@ int[,] PathFiender(int[,] mtr)
     int col = mtr.GetLength(1);
     int count = 1;
 
-    //int [,,] path = new int [raw*col, 2, 2]  //сумма шагов, кордината x, кордината y.
+
 
 int i = 0;
 int j = 0;
@@ -56,27 +56,30 @@ int j = 0;
 mtr[i, j] = count;
 count++;
 
+ while (count < col*raw+1)
+ {
 
-    while (count < raw*col+1)
-    {    
-    if ((j < col-1)&&(mtr[i, j + 1] == 0))              ///
-     { mtr[i, j + 1] = count; j++; }
+ if ((j < col-1)&&(mtr[i, j + 1] == 0))
+    {while ((j < col-1)&&(mtr[i, j + 1] == 0))
+    {mtr[i, j + 1] = count; j++; count++;}}
+    
 
-
-    else if ((i < raw-1)&&(mtr[i + 1, j] == 0))      ///     
-     {mtr[i + 1, j] = count; i++; }
-
-
-    else if ( (j > 0)&&(mtr[i, j - 1] == 0))      //// 
-     {mtr[i, j - 1] = count; j--; }
+    else if ((i < raw-1)&&(mtr[i + 1, j] == 0))  
+     {while((i < raw-1)&&(mtr[i + 1, j] == 0))
+     {mtr[i + 1, j] = count; i++; count++;}}
 
 
-    else if ( (i > 0 )&&(mtr[i - 1, j] == 0))   ///   
-     {mtr[i - 1, j] = count; i--; }
+    else if ( (j > 0)&&(mtr[i, j - 1] == 0)) 
+     {while ((j > 0)&&(mtr[i, j - 1] == 0))
+     {mtr[i, j - 1] = count; j--; count++;}}
 
-    count++;
+
+    else if ( (i > 0 )&&(mtr[i - 1, j] == 0))  
+     {while ((i > 0 )&&(mtr[i - 1, j] == 0)) 
+     {mtr[i - 1, j] = count; i--; count++;}} 
+
+    
     }
-    return mtr;
+   return mtr; 
 }
-
-
+   
