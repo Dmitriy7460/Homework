@@ -8,7 +8,7 @@
 
 int maximum = 28;
 int minimum = 20;
-int range = (maximum - minimum+1);
+int range = (maximum - minimum + 1);
 
 
 int[,,] matrix = CreateMatrix(2, 2, 2, minimum, maximum);
@@ -17,10 +17,9 @@ PrintMatrix(matrix);
 
 
 
-
-int[,,] CreateMatrix(int x, int y, int z, int min, int max )
+int[,,] CreateMatrix(int x, int y, int z, int min, int max)
 {
-    int count=0;//////
+    int count = 0;//////
     int[] array = new int[range];
     int[,,] mtr = new int[x, y, z];
 
@@ -30,20 +29,16 @@ int[,,] CreateMatrix(int x, int y, int z, int min, int max )
         {
             for (int k = 0; k < mtr.GetLength(2); k++)
             {
-
                 array[count] = CheckRepit(min, max, array, count);
                 mtr[i, j, k] = array[count];
-                
+
                 count++;
-
-
             }
         }
     }
-  
+
     return mtr;
 }
-
 
 int CheckRepit(int min, int max, int[] arr, int co)
 {
@@ -51,20 +46,16 @@ int CheckRepit(int min, int max, int[] arr, int co)
     int a = 0;
     bool rep = true;
 
+    while (rep == true)
+    {
+        a = rnd.Next(min, max + 1);
+        rep = false;
 
-while (rep==true)
-{
-    a = rnd.Next(min,max+1);
-    rep = false;
-
-    for (int i = 0; i < co+1; i++)
-    { if (arr[i] == a) {rep=true;}}
-
+        for (int i = 0; i < co + 1; i++)
+        { if (arr[i] == a) { rep = true; } }
+    }
+    return a;
 }
-
-return a;
-}
-
 
 void PrintMatrix(int[,,] mtr)
 {

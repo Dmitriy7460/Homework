@@ -53,9 +53,9 @@ bool Check(int[,] first, int[,] second)
     bool reliability = (first.GetLength(1) == second.GetLength(0));
 
     if (reliability != true)
-    { 
+    {
         Console.WriteLine();
-        Console.WriteLine("Число столбцов первой матрицы должо соответствовать числу строк второй матрицы."); 
+        Console.WriteLine("Число столбцов первой матрицы должо соответствовать числу строк второй матрицы.");
     };
 
     return reliability;
@@ -63,22 +63,22 @@ bool Check(int[,] first, int[,] second)
 
 int[,] Multiplication(int[,] first, int[,] second)
 {
-    int rows = first.GetLength(0);     
-    int coloms = second.GetLength(1);     
+    int rows = first.GetLength(0);
+    int coloms = second.GetLength(1);
     int universal = first.GetLength(1);
 
     int[,] ans = new int[rows, coloms];
 
-    
+
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < coloms; j++)
         {
-            ans[i,j]=0;
+            ans[i, j] = 0;
 
             for (int k = 0; k < universal; k++)
             {
-                ans[i,j]+= first[i,k]*second[k,j];
+                ans[i, j] += first[i, k] * second[k, j];
             }
         }
     }
