@@ -12,7 +12,6 @@ int range = (maximum - minimum + 1);
 
 
 int[,,] matrix = CreateMatrix(2, 2, 2, minimum, maximum);
-
 PrintMatrix(matrix);
 
 

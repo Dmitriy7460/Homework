@@ -1,10 +1,10 @@
 ﻿// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 
 
-int[,] matrix1 = CreateMatrixDobleRnd(2, 1, 1, 3);  // Строки, Столбцы, Мин, Макс.
+int[,] matrix1 = CreateMatrixDobleRnd(2, 1, 1, 3);  // Строки, CОЛБЦЫ, Мин, Макс.
 PrintMatrix(matrix1);
 
-int[,] matrix2 = CreateMatrixDobleRnd(1, 3, 0, 3);  // Строки, Столбцы, Мин, Макс.
+int[,] matrix2 = CreateMatrixDobleRnd(1, 3, 0, 3);  // СТРОКИ, Столбцы, Мин, Макс.
 PrintMatrix(matrix2);
 
 if (Check(matrix1, matrix2) == true)
