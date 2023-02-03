@@ -8,7 +8,7 @@
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 
-int[,] matrix = CreateMatrixDobleRnd(5, 5, -99, 99);  // Строки, Столбцы, Мин, Макс.
+int[,] matrix = CreateMatrixDobleRnd(5, 5, -10, 10);  // Строки, Столбцы, Мин, Макс.
 
 PrintMatrix (matrix);
 Console.WriteLine("");
@@ -90,7 +90,7 @@ void Control(int[,] num)
 {
     for (int i = 0; i <num.GetLength(0); i++)
     {
-    Console.Write($"{num[i,0]} / ");
-    Console.WriteLine(num[i,1]);
+    Console.Write($"{num[i,0]}.");
+    Console.WriteLine($"{num[i,1],4}");
     }
 }

@@ -6,15 +6,30 @@
 // 66(0,0,0) 27(0,0,1) 25(0,1,0) 90(0,1,1)
 // 34(1,0,0) 26(1,0,1) 41(1,1,0) 55(1,1,1)
 
-int maximum = 28;
+int maximum = 50;
 int minimum = 20;
 int range = (maximum - minimum + 1);
 
-
-int[,,] matrix = CreateMatrix(2, 2, 2, minimum, maximum);
-PrintMatrix(matrix);
+int a = 2; int b = 2; int c = 2;
 
 
+CheckStak(a, b, c, range);
+
+    //\\//\\//\\//\\//\\
+
+void CheckStak(int a, int b, int c, int ran)
+{
+    if (((a * b * c) > 0) && (ran >= a * b * c))
+    {
+        int[,,] matrix = CreateMatrix(a, b, c, minimum, maximum);
+        PrintMatrix(matrix);
+    }
+
+    else Console.WriteLine("Размер массива не соответствует заданному диапазону");
+
+    Console.WriteLine($"Количество ячеек матрицы: {a * b * c}");
+    Console.WriteLine($"Диапазон случайных значений: {ran}");
+}
 
 int[,,] CreateMatrix(int x, int y, int z, int min, int max)
 {
@@ -71,3 +86,4 @@ void PrintMatrix(int[,,] mtr)
     Console.WriteLine($"\b\b\b. ");
 
 }
+
